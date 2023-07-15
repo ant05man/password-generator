@@ -8,7 +8,7 @@ var numberArr = ['1','2','3','4','5','6','7','8','9','0'];
 
 
 // Assignment code
-var generateBtn = document.querySelector("#generate")
+var generateBtn = document.querySelector("#generate");
 
 //Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -16,11 +16,13 @@ generateBtn.addEventListener("click", writePassword);
 //Write password to the password Input
 function writePassword() {
     var correctPrompts = getPrompts(); // either true or false
-    if (correctPrompts) {
-    var password = generatePassword();
-    var passwordTest = document.querySelector("#password");
+    var passwordText = document.querySelector("#password");
 
-    password.Text.value = password;
+    if (correctPrompts) {
+    var newPassword = generatePassword();
+    passwordText.value = newPassword;
+    }else {
+        passwordText.value = "";
     }
 }
 
@@ -28,14 +30,17 @@ function generatePassword() {
 //I would generate password based on the prompts
 var password = "";
 for (var i=0; i < characterLength; i++) {
-    var randomIndez = (Math.random() * choiceArr.length);
-    password = password + choiceArr[randomIndex];
+    var randomIndex = Math.floor(Math.random() * choiceArr.length);
+    password  = password + choiceArr[randomIndex];
     }
     return password;
 }
 
 function getPrompts() {
-    characterLength = parseIntprompt("How many characters do you want password to be?(8-128 characters")
+    choiceArr = [];
+
+    characterLength = parseInt(prompt("How many characters do you want password to be?(8-128 characters"));
+    
     if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
         alert("Character Length incorrect. Please Try Again");
         return false;
@@ -53,4 +58,5 @@ function getPrompts() {
     if (confirm("Would you like numbers?")) {
         choiceArr = choiceArr.concat(numberArr);
 }
+return true;
 }
