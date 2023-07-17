@@ -14,10 +14,11 @@
 
 ![Screenshot (9)](https://github.com/ant05man/password-generator/assets/132954354/6eba11ed-cf3d-4d4a-819d-38328c102bff)
 
-![Screenshot (8)](https://github.com/ant05man/password-generator/assets/132954354/8228560a-819a-4104-a45c-2d8b3fea397e)
+![Screenshot (8)](https://github.com/ant05man/password-generator/assets/132954354/13dd0b45-527a-437d-9890-d829831b5299)
+
 
 ## Deployed URL 
-ant05man.github.io/password-generator/
+https://ant05man.github.io/password-generator/
 
 
 
