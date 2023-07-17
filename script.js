@@ -1,10 +1,12 @@
-var characterLength = 8;
-var choiceArr = [];
+// Add all variables for the project
 
-var specialCharArr = ['!','@','#','$','$','%','^','&','*','(',')','{','}','|','/'];
+var characterLength = 8;
+var choices = [];
+
+var specialChar = ['!','@','#','$','$','%','^','&','*','(',')','{','}','|','/'];
 var lowerCaseArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var upperCaseArr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-var numberArr = ['1','2','3','4','5','6','7','8','9','0'];
+var numbers = ['1','2','3','4','5','6','7','8','9','0'];
 
 
 // Assignment code
@@ -37,7 +39,7 @@ for (var i=0; i < characterLength; i++) {
 }
 
 function getPrompts() {
-    choiceArr = [];
+    choices = [];
 
     characterLength = parseInt(prompt("How many characters do you want password to be?(8-128 characters"));
     
@@ -46,17 +48,19 @@ function getPrompts() {
         return false;
     }
 
+// confirm - used to display dialog box w/ option and two buttons
     if (confirm("Would you like lowerCase?")) {
-        choiceArr = choiceArr.concat(lowerCaseArr);
+        choices = choices.concat(lowerCaseArr);
     }
     if (confirm("Would you like upperCase?")) {
-        choiceArr = choiceArr.concat(upperCaseArr);
+        choices = choices.concat(upperCaseArr);
     }
     if (confirm("Would you like special characters?")) {
-        choiceArr = choiceArr.concat(specialCharArr);
+        choices = choices.concat(specialChar);
     }
     if (confirm("Would you like numbers?")) {
-        choiceArr = choiceArr.concat(numberArr);
+        choices = choices.concat(numbers);
 }
-return true;
+// Function will stop if function is TRUE
+return true; 
 }
